@@ -1,0 +1,45 @@
+[[language]]
+name = "toml"
+roots = ["."]
+language-servers = ["taplo"]
+formatter = { command = "taplo", args = ["format", "-"] }
+auto-format = true
+
+[language-server.gopls.config]
+gofumpt = true
+
+[[language]]
+name = "go"
+auto-format = true
+formatter = { command = "goimports" }
+
+[[language]]
+name = "python"
+language-servers = ["ty", "ruff"]
+formatter = { command = "ruff", args = ["format", "-"] }
+auto-format = true
+
+[language-server.ruff]
+command = "ruff"
+args = ["server"]
+
+[language-server.ty]
+command = "ty"
+args = ["server"]
+
+[language-server.ty.config]
+inlayHints.callArgumentNames = false
+experimental.rename = true
+experimental.autoImport = true
+
+[language.debugger]
+name = "debugpy"
+transport = "stdio"
+command = "python3"
+args = ["-m", "debugpy.adapter"]
+
+[[language.debugger.templates]]
+name = "source"
+request = "launch"
+completion = [{ name = "entrypoint", completion = "filename", default = "." }]
+args = { mode = "debug", program = "{0}" }
