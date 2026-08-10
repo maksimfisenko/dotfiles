@@ -2,6 +2,7 @@ theme = "catppuccin_mocha"
 
 [editor]
 line-number = "relative"
+trim-trailing-whitespace = true
 mouse = false
 true-color = true
 
@@ -12,3 +13,6 @@ select = "underline"
 
 [editor.file-picker]
 hidden = false
+
+[keys.insert]
+j = { j = "normal_mode" }
