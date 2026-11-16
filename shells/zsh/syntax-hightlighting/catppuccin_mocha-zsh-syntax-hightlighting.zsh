@@ -1,0 +1,1 @@
+/Users/maksimfisenko/.config/zsh/catppuccin_mocha-zsh-syntax-hightlighting.zsh
