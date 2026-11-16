@@ -1,1 +1,7 @@
-/Users/maksimfisenko/.gitconfig
+[user]
+	name = Maksim Fisenko
+	email = fisenkomaksim.id@gmail.com
+[core]
+	editor = hx
+[init]
+	defaultbranch = master

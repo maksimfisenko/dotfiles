@@ -1,1 +1,2 @@
-/Users/maksimfisenko/.zprofile
+
+eval "$(/opt/homebrew/bin/brew shellenv zsh)"
